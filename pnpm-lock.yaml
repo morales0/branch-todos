@@ -11,6 +11,9 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.5
         version: 4.1.5(vite@6.3.5(jiti@2.4.2)(lightningcss@1.29.2))
+      lineicons-react:
+        specifier: ^2.0.0
+        version: 2.0.0(react@19.1.0)
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -1223,6 +1226,11 @@ packages:
   lightningcss@1.29.2:
     resolution: {integrity: sha512-6b6gd/RUXKaw5keVdSEtqFVdzWnU5jMxTUjA2bVcMNPLwSQ08Sv/UodBVtETLCn7k4S1Ibxwh7k68IwLZPgKaA==}
     engines: {node: '>= 12.0.0'}
+
+  lineicons-react@2.0.0:
+    resolution: {integrity: sha512-Q3vFZgciMDPLSLpqVHBLaBFj+CeorDJMy92iRMpiyNXHn/Us2iH0rBmxYJaP16niOMagXrHyjVBKX9DkOBLJYw==}
+    peerDependencies:
+      react: '>16.0.0'
 
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
@@ -2798,6 +2806,10 @@ snapshots:
       lightningcss-linux-x64-musl: 1.29.2
       lightningcss-win32-arm64-msvc: 1.29.2
       lightningcss-win32-x64-msvc: 1.29.2
+
+  lineicons-react@2.0.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
 
   locate-path@6.0.0:
     dependencies:
