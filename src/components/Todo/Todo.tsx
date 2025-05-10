@@ -11,9 +11,9 @@ export const Todo = ({ id, text, complete }: TodoType) => {
     <div className="flex items-center gap-3 p-3">
       <button
         onClick={() => toggleComplete(id)}
-        className={`group flex-1 p-4 border border-green-600 cursor-pointer rounded-bl-2xl rounded-tr-2xl rounded-br-lg rounded-tl-lg ${
+        className={`group min-w-52 flex-1 p-4 border border-green-600 cursor-pointer rounded-bl-2xl rounded-tr-2xl rounded-br-lg rounded-tl-lg ${
           complete
-            ? "bg-green-50 line-through backdrop-blur-md text-gray-500"
+            ? "bg-green-50 line-through text-gray-500"
             : "bg-white/30 text-black"
         }`}
       >
@@ -34,13 +34,13 @@ export const Todo = ({ id, text, complete }: TodoType) => {
               <Check />
             </div>
           </div>
-          <p className="text-left">{text}</p>
+          <p className="text-left break-all">{text}</p>
         </div>
       </button>
 
       <button
         onClick={() => deleteTodo(id)}
-        className="cursor-pointer w-7 h-7 flex items-center justify-center rounded-sm p-1  hover:bg-gray-200"
+        className="cursor-pointer w-9 h-9 flex items-center justify-center rounded-sm p-1  hover:bg-gray-200"
         aria-label="Delete Todo"
       >
         <XmarkCircle />

@@ -1,32 +1,16 @@
 import { useState } from "react";
 import { useTodoStore } from "../../store";
+import { Control } from "../Control";
 
 // renders the input field for todos
 export const Input = () => {
   const [newTodo, setNewTodo] = useState("");
   const addTodo = useTodoStore((store) => store.addTodo);
-  const clearTodos = useTodoStore((store) => store.clearTodos);
-  const lastAction = useTodoStore((store) => store.lastAction);
-  const undoLastAction = useTodoStore((store) => store.undoLastAction);
 
   return (
-    <div className="fixed bottom-0 left-0 w-full flex justify-center p-4 backdrop-blur-lg border-t-1 border-t-green-600">
+    
       <div className="flex flex-col gap-2 w-full max-w-md">
-        <div className="mx-auto inline-flex border border-gray-300 rounded-lg overflow-hidden">
-          <button
-            onClick={clearTodos}
-            className="cursor-pointer px-4 py-2 bg-white text-gray-800 hover:bg-gray-100 border-r border-gray-300"
-          >
-            Clear
-          </button>
-          <button
-            onClick={undoLastAction}
-            disabled={!lastAction}
-            className="cursor-pointer px-4 py-2 bg-white text-gray-800 hover:bg-gray-100 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
-          >
-            Undo
-          </button>
-        </div>
+        <Control />
 
         <form
           onSubmit={(e) => {
@@ -53,6 +37,5 @@ export const Input = () => {
           </div>
         </form>
       </div>
-    </div>
   );
 };
