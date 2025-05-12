@@ -15,3 +15,4 @@ A simple and responsive To-Do application built with **React**, **TypeScript**, 
 ## ✨ Extra features
 - ✅ Clear all to-dos
 - ✅ Undo last action (one level of undo)
+- ✅ Hosted on github pages: [Pinit: My todo app](https://morales0.github.io/branch-todos/)
